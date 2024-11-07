@@ -1,0 +1,178 @@
+/*cabeçalho */
+.cabecalho__container {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+/* navegação */
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    gap: 15px;
+
+}
+
+/* menu aside lateral */
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+}
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.menu__lista li {
+   
+    align-self: center;   
+
+}
+/*aqui esta o menu para celular */
+.menu__itens {
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 5px;
+}
+/* alerta de pseudo classe */
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+/* videos */
+
+.videos__item {
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.descricao-video {
+   
+    padding: 5px;
+
+    
+}
+.descricao-video img {
+    
+    width: 30px;
+    
+}
+
+
+
+/* rodapé */
+.rodape__container {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    flex-flow: column wrap;
+   
+}
+
+/*------------------------------------------------------------------------ */
+
+/*  compactado para celular */
+
+@media (min-width: 834px) {
+/* cabeçalho */
+
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+/* rodapé */
+    .rodape__container {
+    
+      justify-content: space-between;
+      
+    }
+/* menu lateral */
+.menu__container {
+    
+    left: 0;
+    height: auto;
+    width: 74px;
+    top: 80px;
+}
+.menu__lista {
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 18px;
+    white-space: nowrap;
+    gap: 33px;
+}
+
+
+}
+/*------------------------------------------------------------------------ */
+/*  compactado para computador */
+
+@media(min-width:1440px) {
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+    .menu__lista {
+       
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+        
+    }
+    .menu__itens {
+        
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+.jogos {
+    order: 4;
+}
+.filmes {
+    order: 3;
+}
+.premium {
+    order: 2;
+}
+.maispagina {
+    order: 1;
+}
+    
+}
+
+
